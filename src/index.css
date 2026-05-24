@@ -68,9 +68,10 @@ body {
 
 h1,
 h2 {
-  font-family: var(--heading);
+  font-family: "Times New Roman, Times, serif";
   font-weight: 500;
-  color: var(--text-h);
+  color: #0D065F;
+  font-style: bold;
 }
 
 h1 {
@@ -93,6 +94,7 @@ h2 {
 }
 p {
   margin: 0;
+  font-family: "Arial, Helvetica, sans-serif";
 }
 
 code,
@@ -109,3 +111,4 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
