@@ -1,0 +1,22 @@
+#Login{
+    padding-top: 25ch;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.form-login{
+    display: grid;
+    gap: 1ch;
+}
+
+h1{
+    font-family: "Times New Roman, Times, serif";
+    padding-left: 2.6ch;
+    font-style: bold;
+    color: #0D065F;
+}
+
+p{
+    font-family: "Arial, Helvetica, sans-serif";
+}
