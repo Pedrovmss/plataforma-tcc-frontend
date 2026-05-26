@@ -11,7 +11,7 @@ function Navbar() {
           />
         </a>
 
-        <a className="navbar-brand" style={{ fontFamily: "Times New Roman, Times, serif" }}>
+        <a className="navbar-brand" style={{ fontFamily: "Trebuchet MS, sans-serif" }}>
           Revista Acadêmica
         </a>
 
@@ -27,7 +27,8 @@ function Navbar() {
         </button>
 
         <aside
-          className="bg-dark text-white offcanvas offcanvas-end text-bg-dark"
+          className="offcanvas offcanvas-end text-white"
+          style={{ backgroundColor: "#0d065f" }}
           tabIndex="-1"
           id="offcanvasDarkNavbar"
           aria-labelledby="offcanvasDarkNavbarLabel"
