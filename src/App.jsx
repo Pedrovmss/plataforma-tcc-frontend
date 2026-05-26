@@ -25,6 +25,7 @@ function App() {
       title,
       description,
       tags: [],
+      // ID TEMPORÁRIO PARA TESTE POIS ESTÁ HARDCODED. INTEGRAÇÃO LOGIN/CADASTRO AO BACKEND NECESSÁRIA
       authorId: "92cb7593-38ca-4494-8e18-95f5e5f88aa1"
     });
 
