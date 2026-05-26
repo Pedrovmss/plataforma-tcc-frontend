@@ -1,99 +1,73 @@
-import { useState } from "react";
-import "/src/CSS/formulario.css";
+import { useState } from 'react'
+import "/src/CSS/formulario.css"
+import { useNavigate } from 'react-router-dom'
 
 function App_Login() {
 
-  const [nome, setNome] = useState("");
-  const [senha, setSenha] = useState("");
-  const [login_status, setLogin_status] = useState(null);
+  const [nome, setNome] = useState("")
+  const [senha, setSenha] = useState("")
+  const [login_status, setLogin_status] = useState(null)
+  const navigate = useNavigate()
 
-  const registrarNome = (event) => {
-    setNome(event.target.value);
+  const registrarNome = (nome) =>{
+    setNome(nome.target.value)
   };
 
-  const registrarSenha = (event) => {
-    setSenha(event.target.value);
+  const registrarSenha = (senha) =>{
+    setSenha(senha.target.value)
   };
 
-  const verficacaoLogin = (resposta) => {
-    if (resposta === "Sucesso") {
-      setLogin_status(true);
-    } else {
-      setLogin_status(false);
+  const verficacaoLogin = () =>{
+    if(nome === "" || senha === ""){
+      setLogin_status("campos_incopletos")
+    }else{
+      setLogin_status("login_ok")
+      navigate("/index.html")
     }
-  };
+  }
 
   return (
-    <main className="container d-flex justify-content-center align-items-center vh-100">
+    <>
+    <main className="container">
+      <form className='p-4 rounded shadow col-md-6 mx-auto mt-5'>
 
-      <section className="card shadow p-4" style={{ width: "450px" }}>
+        <img src="/images/logo_login/estude.png" height={180} width={180} />
 
-        <h1 className="text-center mb-4">
-          Login
-        </h1>
+        <div className="mb-3 mt-3">
 
-        <div className="mb-3">
+          <input type="text" className="form-control username_inp back_input" id="exampleFormControlInput1" placeholder="Usuario" value={nome} onChange={registrarNome}></input>
 
-          <label className="form-label">
-            Nome
-          </label>
+          <input type="password" className="form-control senha_inp back_input mt-2" id="exampleFormControlInput1" placeholder="Senha" value={senha} onChange={registrarSenha}></input>
+          
+          <p className='d-flex mt-3 gap-2' id='button_group'>
+            
+            <button className="btn btn-primary btn-sm" type="button" onClick={() => verficacaoLogin()} id='buttons_form'>
+              Entrar
+            </button>
+            
+            <a className="btn btn-primary btn-sm" href="/cadastro" role="button" id="buttons_form">
+              Cadastrar conta
+            </a>
+            
+          </p>
 
-          <input
-            type="text"
-            className="form-control"
-            value={nome}
-            onChange={registrarNome}
-            placeholder="Digite seu Nome"
-          />
-
-        </div>
-
-        <div className="mb-3">
-
-          <label className="form-label">
-            Senha
-          </label>
-
-          <input
-            type="password"
-            className="form-control"
-            value={senha}
-            onChange={registrarSenha}
-            placeholder="Digite sua senha"
-          />
-
-        </div>
-
-        <button
-          className="btn btn-primary w-100"
-          onClick={() => verficacaoLogin(String(""))}
-        >
-          Login
-        </button>
-
-        <a
-          href="/cadastro"
-          className="text-center mt-3"
-        >
-          Não possui conta? Crie agora
-        </a>
-
-        {login_status === true && (
-          <p className="text-success text-center mt-3">
+          {login_status == "login_ok" && (
+          <p className="alert alert-success mt-2" role="alert">
             Login realizado com sucesso
-          </p>
-        )}
+          </p>)}
 
-        {login_status === false && (
-          <p className="text-danger text-center mt-3">
-            Usuário ou senha incorretos
-          </p>
-        )}
+          {login_status == "campos_incopletos" && (
+          <p className="alert alert-danger mt-2" role="alert">
+            Complete todos os campos
+          </p>)}
 
-      </section>
-
+        </div>
+      </form>
     </main>
+    </>
   );
 }
 
-export default App_Login;
+export default App_Login
+
+
