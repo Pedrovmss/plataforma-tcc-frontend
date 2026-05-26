@@ -48,7 +48,12 @@ function App_Cadastro() {
 
       <form className='p-4 rounded shadow col-md-6 mx-auto mt-5' id='form_config'>
 
-        <img src="/images/logo_login/estude.png" height={180} width={180} />
+          <img
+            src="/images/logo_login/estude.png"
+            height={180}
+            width={180}
+            className="d-block mx-auto"
+          />
 
         <div className="mb-3 mt-3 d-grid gap-2">
 

@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <nav className="navbar navbar-dark fixed-top" style={{ backgroundColor: "#0d065f" }}>
+    <nav className="navbar navbar-dark" style={{ backgroundColor: "#0d065f" }}>
       <section className="container-fluid">
         <a href="https://www.udf.edu.br/">
           <img

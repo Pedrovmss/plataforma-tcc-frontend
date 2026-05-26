@@ -35,7 +35,6 @@ function App() {
 
   return (
     <>
-      <Navbar />
 
       <main className="container" style={{ paddingTop: "170px" }}>
         <h1>Plataforma TCC</h1>
