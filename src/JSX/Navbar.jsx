@@ -45,16 +45,16 @@ function Navbar() {
           </header>
 
           <section className="offcanvas-body">
-            <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <ul className="navbar-nav justify-content-end flex-grow-1 pe-3 text-start">
               <li className="nav-item">
                 <a className="nav-link active" href="/">Home</a>
               </li>
 
-              <li className="nav-item">
+              <li className="nav-item text-start">
                 <a className="nav-link" href="/login">Login</a>
               </li>
 
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown text-start">
                 <a
                   className="nav-link dropdown-toggle"
                   href="#"
