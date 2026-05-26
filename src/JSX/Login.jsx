@@ -22,7 +22,7 @@ function App_Login() {
       setLogin_status("campos_incopletos")
     }else{
       setLogin_status("login_ok")
-      navigate("/index.html")
+      navigate("/")
     }
   }
 
