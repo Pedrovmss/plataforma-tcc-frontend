@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "./services/api";
+import Navbar from "./JSX/Navbar";
 import "./App.css";
 
 function App() {
@@ -24,7 +25,6 @@ function App() {
       title,
       description,
       tags: [],
-      //ID TEMPORARIO PARA TESTE
       authorId: "92cb7593-38ca-4494-8e18-95f5e5f88aa1"
     });
 
@@ -32,58 +32,52 @@ function App() {
     setDescription("");
     loadProjects();
   }
-  async function handleCreateUser() {
-  await api.post("/api/users", {
-    name: "Pedro Teste",
-    email: "pedro@teste.com",
-    password: "123456",
-    bio: "Aluno de desenvolvimento frontend",
-    role: "STUDENT"
-  });
-
-  alert("Usuário teste criado!");
-}
 
   return (
-    <main>
-      <h1>Plataforma TCC</h1>
+    <>
+      <Navbar />
 
-      <p>Publique, organize e encontre projetos acadêmicos.</p>
-      <button onClick={handleCreateUser}>
-        Criar usuário teste
-      </button>
+      <main className="container" style={{ paddingTop: "170px" }}>
+        <h1>Plataforma TCC</h1>
 
-      <h2>Cadastrar projeto</h2>
+        <p>Publique, organize e encontre projetos acadêmicos.</p>
 
-      <form onSubmit={handleCreateProject}>
-        <input
-          placeholder="Título do projeto"
-          value={title}
-          onChange={(event) => setTitle(event.target.value)}
-        />
+        <h2>Cadastrar projeto</h2>
 
-        <textarea
-          placeholder="Descrição do projeto"
-          value={description}
-          onChange={(event) => setDescription(event.target.value)}
-        />
+        <form onSubmit={handleCreateProject}>
+          <input
+            className="form-control mb-2"
+            placeholder="Título do projeto"
+            value={title}
+            onChange={(event) => setTitle(event.target.value)}
+          />
 
-        <button type="submit">Cadastrar</button>
-      </form>
+          <textarea
+            className="form-control mb-2"
+            placeholder="Descrição do projeto"
+            value={description}
+            onChange={(event) => setDescription(event.target.value)}
+          />
 
-      <h2>Projetos cadastrados</h2>
+          <button className="btn btn-primary" type="submit">
+            Cadastrar
+          </button>
+        </form>
 
-      {projects.length === 0 ? (
-        <p>Nenhum projeto cadastrado ainda.</p>
-      ) : (
-        projects.map((project) => (
-          <div key={project.id}>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-          </div>
-        ))
-      )}
-    </main>
+        <h2 className="mt-4">Projetos cadastrados</h2>
+
+        {projects.length === 0 ? (
+          <p>Nenhum projeto cadastrado ainda.</p>
+        ) : (
+          projects.map((project) => (
+            <article key={project.id} className="card p-3 mb-2">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+            </article>
+          ))
+        )}
+      </main>
+    </>
   );
 }
 
