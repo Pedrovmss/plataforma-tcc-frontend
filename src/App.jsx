@@ -26,6 +26,7 @@ function App() {
       description,
       tags: [],
       // ID TEMPORÁRIO PARA TESTE POIS ESTÁ HARDCODED. INTEGRAÇÃO LOGIN/CADASTRO AO BACKEND NECESSÁRIA
+      // Na arquitetura final, usuários/autores/projetos devem vir do OJS.
       authorId: "92cb7593-38ca-4494-8e18-95f5e5f88aa1"
     });
 
@@ -72,7 +73,28 @@ function App() {
           projects.map((project) => (
             <article key={project.id} className="card p-3 mb-2">
               <h3>{project.title}</h3>
+
               <p>{project.description}</p>
+
+              {/* CAMPOS FUTUROS ESPERADOS DA INTEGRAÇÃO COM OJS */}
+              
+
+              {project.authorName && (
+                <p>
+                  <strong>Autor:</strong> {project.authorName}
+                </p>
+              )}
+
+              {project.ojsUrl && (
+                <a
+                  href={project.ojsUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-outline-primary mt-2"
+                >
+                  Ver no OJS
+                </a>
+              )}
             </article>
           ))
         )}
