@@ -43,6 +43,25 @@ function App() {
 
         <p>Publique, organize e encontre projetos acadêmicos.</p>
 
+        <a
+          href="https://wrought-antiquely-shelter.ngrok-free.dev/ojs"
+          target="_blank"
+          rel="noreferrer"
+          style={{
+            padding: "10px 20px",
+            backgroundColor: "#2b6cb0",
+            color: "white",
+            textDecoration: "none",
+            borderRadius: "5px",
+            fontFamily: "sans-serif",
+            display: "inline-block",
+            marginTop: "15px",
+            marginBottom: "25px"
+          }}
+        >
+          Acessar Repositório Labtech
+        </a>
+
         <h2>Cadastrar projeto</h2>
 
         <form onSubmit={handleCreateProject}>
