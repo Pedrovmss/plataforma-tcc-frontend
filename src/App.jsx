@@ -38,7 +38,7 @@ function App() {
   return (
     <>
 
-      <main className="container" style={{ paddingTop: "170px" }}>
+      <main className="container mt-5">
         <h1>Plataforma TCC</h1>
 
         <p>Publique, organize e encontre projetos acadêmicos.</p>
