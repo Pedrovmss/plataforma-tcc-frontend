@@ -2,18 +2,6 @@ function Navbar() {
   return (
   <nav className="navbar navbar-dark" style={{ backgroundColor: "#0d065f" }}>
       <section className="container-fluid">
-        <a href="https://www.udf.edu.br/">
-          <img
-            src="https://www.udf.edu.br/wp-content/themes/cruzeiroportais2019/assets/imagens/marcas/marcaUdfVariacaoReduzida.svg"
-            alt="Logo UDF"
-            width="128"
-            height="128"
-          />
-        </a>
-
-        <a className="navbar-brand" style={{ fontFamily: "Trebuchet MS, sans-serif" }}>
-          Revista Acadêmica
-        </a>
 
         <button
           className="navbar-toggler"
@@ -26,6 +14,19 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
+        <a className="navbar-brand" href="/" style={{ fontFamily: "Trebuchet MS, sans-serif" }}>
+          Revista Acadêmica
+        </a>
+
+        <a href="https://www.udf.edu.br/">
+          <img
+            src="https://www.udf.edu.br/wp-content/themes/cruzeiroportais2019/assets/imagens/marcas/marcaUdfVariacaoReduzida.svg"
+            alt="Logo UDF"
+            width="128"
+            height="128"
+          />
+        </a>
+        
         <aside
           className="offcanvas offcanvas-end text-white"
           style={{ backgroundColor: "#0d065f" }}
