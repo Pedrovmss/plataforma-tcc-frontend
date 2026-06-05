@@ -13,8 +13,8 @@ function BuscarProjetos(){
             {id: 5, title: 'Teste 1', author:"reis", description:"projeto biologia", tags: "react", createdAt: "2022-05-29"},
             {id: 6, title: 'Teste 1', author:"reis", description:"projeto cientifica", tags: "educacao fisica", createdAt: "2022-05-29"},
             {id: 7, title: 'Teste 1', author:"reis", description:"projeto cientifica", tags: "react", createdAt: "2022-05-29"},
-            {id: 8, title: 'Teste 1', author:"reis", description:"projeto educacao fisica", tags: "educacao fisica", createdAt: "2022-05-29"},
-            {id: 9, title: 'Teste 1', author:"reis", description:"projeto educacao fisica", tags: "educacao fisica", createdAt: "2022-05-29"},
+            {id: 8, title: 'Teste 1', author:"reis", description:"projeto filosofia", tags: "materia", createdAt: "2022-05-29"},
+            {id: 9, title: 'Teste 1', author:"reis", description:"projeto filosofia", tags: "materia", createdAt: "2021-05-29"},
             {id: 10, title: 'Teste 1', author:"reis", description:"projeto educacao fisica", tags: "educacao fisica", createdAt: "2022-05-29"}
     ]
 
