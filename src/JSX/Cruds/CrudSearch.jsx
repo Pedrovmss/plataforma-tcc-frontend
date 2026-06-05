@@ -21,6 +21,7 @@ function listarProjetos(projetos){
                         <img src="/images/BuscaProjetos/livro.png" class="w-20" alt="..."/>
                     </div>
                     <div className="col-md-6 p-2 ps-md-0">
+                        {/*Colocar no href do link abaixo o link do projeto no ojs*/}
                         <a href="#" className="stretched-link title_link mt-0">{projects.title}</a>
                         <p className="author_name mt-2">Author: <strong>{projects.author}</strong></p>
                         <p className="author_name">Date: {projects.createdAt}</p>
