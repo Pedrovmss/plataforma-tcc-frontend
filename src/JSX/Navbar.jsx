@@ -28,7 +28,7 @@ function Navbar() {
         </a>
         
         <aside
-          className="offcanvas offcanvas-end text-white"
+          className="offcanvas offcanvas-start text-white"
           style={{ backgroundColor: "#0d065f" }}
           tabIndex="-1"
           id="offcanvasDarkNavbar"
