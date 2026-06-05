@@ -1,0 +1,56 @@
+.pesquisa_input{
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.pesquisa_input:focus{
+    box-shadow: none;
+    border-color: black;
+    transition: 1s;
+}
+
+.pesquisa_input:not(:focus){
+    transition: 0.3s;
+}
+
+.filter_config{
+    background-image: url("/images/filtro/filtro.png");
+    padding-left: 45px;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.filter_config:focus{
+    box-shadow: none;
+    border-color: black;
+    transition: 0.5s;
+}
+
+.canvas{
+    background-color: #0D065F;
+    color: white;
+}
+
+.title_link{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #3418E8;
+}
+
+.author_name{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 15px;
+}
+
+h5,
+h6{
+    font-family: 'Times New Roman', Times, serif;
+}
+
