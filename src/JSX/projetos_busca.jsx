@@ -4,7 +4,7 @@ import querys from "./Cruds/CrudSearch.jsx";
 
 function BuscarProjetos(){
 
-    // Tirar o que está em barra e colocar como valor a tabela projetos do banco
+    // Tirar o que está em colchetes e colocar como valor a tabela projetos do banco
     const projetos = [
             {id: 1, title: 'Teste 1', author:"igor", description:"projeto cientifica", tags: "cientifica", createdAt: "2022-05-29"},
             {id: 2, title: 'Teste 2', author:"igor", description:"projeto educacao fisica", tags: "educacao fisica", createdAt: "2023-05-29"},
