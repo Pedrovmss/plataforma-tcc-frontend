@@ -18,7 +18,7 @@ function listarProjetos(projetos){
             <div className="col" key={projects.id}>
                 <div className="row g-0 bg-light position-relative mt-3">
                     <div className="col-md-2 mb-md-1 p-md-4">
-                        <img src="/images/BuscaProjetos/livro.png" class="w-20" alt="..."/>
+                        <img src="/images/BuscaProjetos/livro.png" className="w-20" alt="..."/>
                     </div>
                     <div className="col-md-6 p-2 ps-md-0">
                         {/*Colocar no href do link abaixo o link do projeto no ojs*/}
