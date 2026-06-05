@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <nav className="navbar navbar-dark" style={{ backgroundColor: "#0d065f" }}>
+  <nav className="navbar navbar-dark" style={{ backgroundColor: "#0d065f" }}>
       <section className="container-fluid">
         <a href="https://www.udf.edu.br/">
           <img
@@ -66,29 +66,19 @@ function Navbar() {
                   Postagens
                 </a>
 
-                <ul className="dropdown-menu dropdown-menu-dark">
-                  <li><a className="dropdown-item" href="#">Adicionar</a></li>
-                  <li><a className="dropdown-item" href="#">Listar</a></li>
+                <ul className="dropdown-menu dropdown-menu-dark" style={{ backgroundColor: "#000031" }}>
+                  <li><a className="dropdown-item" href="/cadastrar_projetos">Adicionar</a></li>
                 </ul>
               </li>
             </ul>
-
-            <form className="d-flex mt-3" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Repositório"
-                aria-label="Search"
-              />
-              <button className="btn btn-success" type="submit">
-                Pesquisar
-              </button>
-            </form>
           </section>
         </aside>
       </section>
     </nav>
   );
 }
+
+export default Navbar;
+
 
 export default Navbar;
