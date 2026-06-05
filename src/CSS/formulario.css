@@ -1,13 +1,13 @@
 .username_inp{
-    background-image: url("/images/user/avatar.png");
+    background-image: url("/images/Formularios/avatar.png");
 }
 
 .email_inp{
-    background-image: url("/images/email/e-mail.png");
+    background-image: url("/images/Formularios/e-mail.png");
 }
 
 .senha_inp{
-    background-image: url("/images/senha/senha.png");
+    background-image: url("/images/Formularios/senha.png");
 }
 
 .back_input{
@@ -21,6 +21,11 @@
 .back_input:focus{
     border-color:#3418E8;
     box-shadow: 0 0 0 3px #1A0C8C;
+    transition: 0.3s;
+}
+
+.back_input:not(:focus){
+    transition: 0.3s;
 }
 
 #button_group{
@@ -35,8 +40,14 @@
 
 #buttons_form:active{
     box-shadow: inset 0 4px 10px #000031;
-    transform: scale(0.95);
-    transition: 0s;
+    transform: scale(0.9);
+    transition: 0.1s;
 }
+
+#buttons_form:not(:active){
+    transform: scale(1);
+    transition: 0.2s;
+}
+
 
 
