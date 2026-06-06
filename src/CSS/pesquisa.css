@@ -54,3 +54,14 @@ h6{
     font-family: 'Times New Roman', Times, serif;
 }
 
+.buttons_pages{
+    border: none;
+}
+
+.buttons_pages:hover{
+    background-color: white;
+}
+
+.buttons_pages:focus{
+    box-shadow: none;
+}
