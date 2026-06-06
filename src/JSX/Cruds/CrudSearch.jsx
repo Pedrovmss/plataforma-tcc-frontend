@@ -32,6 +32,7 @@ function ListaProjetos({projetos}) {
                         </div>
 
                         <div className="col-md-6 p-2 ps-md-0 mt-3">
+                            {/* mudar o href para a tela onde está localizado o projeto do usuario no ojs */}
                             <a href="#" className="stretched-link title_link mt-0">
                                 {projects.title}
                             </a>
