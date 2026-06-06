@@ -78,7 +78,7 @@ function BuscarProjetos(){
 
             return(
                 <div>
-                    {querys.listarProjetos(projetos_fill)}
+                    <querys.ListaProjetos projetos={projetos_fill} />;
                 </div>
             )
         }
@@ -142,57 +142,58 @@ function BuscarProjetos(){
                 />
             </div>    
 
-            <button className="btn btn-primary" id="buttons_form" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Filtrar</button>
             
-            {mostrar_projetos()}
-
-            <div className="offcanvas offcanvas-top" tabIndex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-                <div className="offcanvas-header" style={{backgroundColor:"#000031", color: "white"}}>
-                    <h5 id="offcanvasTopLabel">Filtrar</h5>
-                    <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div className="offcanvas-body canvas">
-                    <div className="form-check">
-                        <input className="form-check-input" type="checkbox" value={"title"} id="flexCheckDefault" checked={filtros.title} onChange={(e) => {alterarFiltros(e); setValueTitulo("")}} />
-                        <label className="form-check-label" form="flexCheckDefault">
-                            Titulo
-                        </label>
+                    <button className="btn btn-primary" id="buttons_form" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Filtrar</button>
+                
+                    {mostrar_projetos()}
+                    
+                    <div className="offcanvas offcanvas-top" tabIndex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                        <div className="offcanvas-header" style={{backgroundColor:"#000031", color: "white"}}>
+                            <h5 id="offcanvasTopLabel">Filtrar</h5>
+                            <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div className="offcanvas-body canvas">
+                            <div className="form-check">
+                                <input className="form-check-input" type="checkbox" value={"title"} id="flexCheckDefault" checked={filtros.title} onChange={(e) => {alterarFiltros(e); setValueTitulo("")}} />
+                                <label className="form-check-label" form="flexCheckDefault">
+                                    Titulo
+                                </label>
+                            </div>
+                            <div className="form-check">
+                                <input className="form-check-input" type="checkbox" value={"author"} id="flexCheckChecked" checked={filtros.author} onChange={(e) => {alterarFiltros(e); setValueAuthor("")}} />
+                                <label className="form-check-label" form="flexCheckChecked">
+                                    Author
+                                </label>
+                            </div>
+                            <div className="form-check">
+                                <input className="form-check-input" type="checkbox" value={"description"} id="flexCheckChecked" checked={filtros.description} onChange={(e) => {alterarFiltros(e); setValueDescription("")}} />
+                                <label className="form-check-label" form="flexCheckChecked">
+                                    Description
+                                </label>
+                            </div>
+                            <div className="form-check">
+                                <input className="form-check-input" type="checkbox" value={"tags"} id="flexCheckChecked" checked={filtros.tags} onChange={(e) => {alterarFiltros(e); setValueTags("")}} />
+                                <label className="form-check-label" form="flexCheckChecked">
+                                    Tags
+                                </label>
+                            </div>
+                            <div className="form-check">
+                                <input className="form-check-input" type="checkbox" value={"createdAt"} id="flexCheckChecked" checked={filtros.createdAt} onChange={(e) => {alterarFiltros(e); setValueData("")}} />
+                                <label className="form-check-label" form="flexCheckChecked">
+                                    Data
+                                </label>
+                                {filtros.createdAt == true && (
+                                    <input
+                                        className="form-control me-2 pesquisa_input mt-2"
+                                        type="date"
+                                        aria-label="Date"
+                                        value={createdAt}
+                                        onChange={registrarData}
+                                    />
+                                )}
+                            </div>
+                        </div>
                     </div>
-                    <div className="form-check">
-                        <input className="form-check-input" type="checkbox" value={"author"} id="flexCheckChecked" checked={filtros.author} onChange={(e) => {alterarFiltros(e); setValueAuthor("")}} />
-                        <label className="form-check-label" form="flexCheckChecked">
-                            Author
-                        </label>
-                    </div>
-                    <div className="form-check">
-                        <input className="form-check-input" type="checkbox" value={"description"} id="flexCheckChecked" checked={filtros.description} onChange={(e) => {alterarFiltros(e); setValueDescription("")}} />
-                        <label className="form-check-label" form="flexCheckChecked">
-                            Description
-                        </label>
-                    </div>
-                    <div className="form-check">
-                        <input className="form-check-input" type="checkbox" value={"tags"} id="flexCheckChecked" checked={filtros.tags} onChange={(e) => {alterarFiltros(e); setValueTags("")}} />
-                        <label className="form-check-label" form="flexCheckChecked">
-                            Tags
-                        </label>
-                    </div>
-                    <div className="form-check">
-                        <input className="form-check-input" type="checkbox" value={"createdAt"} id="flexCheckChecked" checked={filtros.createdAt} onChange={(e) => {alterarFiltros(e); setValueData("")}} />
-                        <label className="form-check-label" form="flexCheckChecked">
-                            Data
-                        </label>
-                        {filtros.createdAt == true && (
-                            <input
-                                className="form-control me-2 pesquisa_input mt-2"
-                                type="date"
-                                aria-label="Date"
-                                value={createdAt}
-                                onChange={registrarData}
-                            />
-                        )}
-                    </div>
-                </div>
-            </div>
         </main>
         </>
     )
